@@ -1,2 +1,3 @@
 # pet-adoption
-Front end masters React project
+
+Front end masters code-along React project
