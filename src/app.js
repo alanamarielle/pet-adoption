@@ -1,15 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Render } from "react-dom";
+import { Router } from "@reach/router";
 import SearchParams from "./SearchParams";
+import Details from "./details";
 
 const App = () => {
   return (
-    <div>
-      <h1 id="something-important" >Adopt Me!</h1>
-      <SearchParams />
-    </div>
-  )
+    <React.StrictMode>
+      <div>
+        <h1 id="something-important">Adopt Me!</h1>
+        <Router>
+          <SearchParams path="/" />
+          <Details path="/details/:id" />
+        </Router>
+      </div>
+    </React.StrictMode>
+  );
 };
-
 
 ReactDOM.render(<App />, document.getElementById("root"));
